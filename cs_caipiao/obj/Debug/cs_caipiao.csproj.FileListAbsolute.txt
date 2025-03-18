@@ -1,0 +1,10 @@
+G:\git\cs_caipiao\cs_caipiao\bin\Debug\cs_caipiao.exe.config
+G:\git\cs_caipiao\cs_caipiao\bin\Debug\cs_caipiao.exe
+G:\git\cs_caipiao\cs_caipiao\bin\Debug\cs_caipiao.pdb
+G:\git\cs_caipiao\cs_caipiao\obj\Debug\cs_caipiao.csproj.AssemblyReference.cache
+G:\git\cs_caipiao\cs_caipiao\obj\Debug\cs_caipiao.Form1.resources
+G:\git\cs_caipiao\cs_caipiao\obj\Debug\cs_caipiao.Properties.Resources.resources
+G:\git\cs_caipiao\cs_caipiao\obj\Debug\cs_caipiao.csproj.GenerateResource.cache
+G:\git\cs_caipiao\cs_caipiao\obj\Debug\cs_caipiao.csproj.CoreCompileInputs.cache
+G:\git\cs_caipiao\cs_caipiao\obj\Debug\cs_caipiao.exe
+G:\git\cs_caipiao\cs_caipiao\obj\Debug\cs_caipiao.pdb
