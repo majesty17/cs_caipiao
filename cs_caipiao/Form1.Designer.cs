@@ -31,7 +31,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label_last = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.textBox_hasno = new System.Windows.Forms.TextBox();
+            this.checkBox_r6_hasno = new System.Windows.Forms.CheckBox();
+            this.textBox_has = new System.Windows.Forms.TextBox();
+            this.checkBox_r6_has = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox_r5_fix_sum = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_fix_sum = new System.Windows.Forms.NumericUpDown();
             this.checkBox_r5_gt130 = new System.Windows.Forms.CheckBox();
             this.checkBox_r5_lt71 = new System.Windows.Forms.CheckBox();
             this.checkBox_r5_121_130 = new System.Windows.Forms.CheckBox();
@@ -88,16 +95,11 @@
             this.button_gen = new System.Windows.Forms.Button();
             this.label_ret = new System.Windows.Forms.Label();
             this.button_ran = new System.Windows.Forms.Button();
-            this.numericUpDown_fix_sum = new System.Windows.Forms.NumericUpDown();
-            this.checkBox_r5_fix_sum = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.checkBox_r6_has = new System.Windows.Forms.CheckBox();
-            this.textBox_has = new System.Windows.Forms.TextBox();
-            this.checkBox_r6_hasno = new System.Windows.Forms.CheckBox();
-            this.textBox_hasno = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_fix_sum)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_str6)).BeginInit();
@@ -107,8 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_str2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_fix_sum)).BeginInit();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -159,6 +159,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "过滤规则";
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.textBox_hasno);
+            this.groupBox7.Controls.Add(this.checkBox_r6_hasno);
+            this.groupBox7.Controls.Add(this.textBox_has);
+            this.groupBox7.Controls.Add(this.checkBox_r6_has);
+            this.groupBox7.Location = new System.Drawing.Point(6, 429);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(471, 92);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "规则6：锁定与排除(英文逗号,隔开)";
+            // 
+            // textBox_hasno
+            // 
+            this.textBox_hasno.Location = new System.Drawing.Point(98, 50);
+            this.textBox_hasno.Name = "textBox_hasno";
+            this.textBox_hasno.Size = new System.Drawing.Size(367, 25);
+            this.textBox_hasno.TabIndex = 3;
+            this.textBox_hasno.Text = "4,5,6";
+            // 
+            // checkBox_r6_hasno
+            // 
+            this.checkBox_r6_hasno.AutoSize = true;
+            this.checkBox_r6_hasno.Location = new System.Drawing.Point(17, 56);
+            this.checkBox_r6_hasno.Name = "checkBox_r6_hasno";
+            this.checkBox_r6_hasno.Size = new System.Drawing.Size(74, 19);
+            this.checkBox_r6_hasno.TabIndex = 2;
+            this.checkBox_r6_hasno.Text = "必排除";
+            this.checkBox_r6_hasno.UseVisualStyleBackColor = true;
+            // 
+            // textBox_has
+            // 
+            this.textBox_has.Location = new System.Drawing.Point(98, 19);
+            this.textBox_has.Name = "textBox_has";
+            this.textBox_has.Size = new System.Drawing.Size(367, 25);
+            this.textBox_has.TabIndex = 1;
+            this.textBox_has.Text = "1,2,3";
+            // 
+            // checkBox_r6_has
+            // 
+            this.checkBox_r6_has.AutoSize = true;
+            this.checkBox_r6_has.Location = new System.Drawing.Point(17, 25);
+            this.checkBox_r6_has.Name = "checkBox_r6_has";
+            this.checkBox_r6_has.Size = new System.Drawing.Size(74, 19);
+            this.checkBox_r6_has.TabIndex = 0;
+            this.checkBox_r6_has.Text = "必包含";
+            this.checkBox_r6_has.UseVisualStyleBackColor = true;
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.checkBox_r5_fix_sum);
@@ -177,6 +226,41 @@
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "规则5：和值";
+            // 
+            // checkBox_r5_fix_sum
+            // 
+            this.checkBox_r5_fix_sum.AutoSize = true;
+            this.checkBox_r5_fix_sum.Checked = true;
+            this.checkBox_r5_fix_sum.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_r5_fix_sum.Location = new System.Drawing.Point(356, 24);
+            this.checkBox_r5_fix_sum.Name = "checkBox_r5_fix_sum";
+            this.checkBox_r5_fix_sum.Size = new System.Drawing.Size(89, 19);
+            this.checkBox_r5_fix_sum.TabIndex = 9;
+            this.checkBox_r5_fix_sum.Text = "固定和值";
+            this.checkBox_r5_fix_sum.UseVisualStyleBackColor = true;
+            this.checkBox_r5_fix_sum.CheckedChanged += new System.EventHandler(this.checkBox_r5_fix_sum_CheckedChanged);
+            // 
+            // numericUpDown_fix_sum
+            // 
+            this.numericUpDown_fix_sum.Location = new System.Drawing.Point(376, 49);
+            this.numericUpDown_fix_sum.Maximum = new decimal(new int[] {
+            183,
+            0,
+            0,
+            0});
+            this.numericUpDown_fix_sum.Minimum = new decimal(new int[] {
+            21,
+            0,
+            0,
+            0});
+            this.numericUpDown_fix_sum.Name = "numericUpDown_fix_sum";
+            this.numericUpDown_fix_sum.Size = new System.Drawing.Size(69, 25);
+            this.numericUpDown_fix_sum.TabIndex = 8;
+            this.numericUpDown_fix_sum.Value = new decimal(new int[] {
+            111,
+            0,
+            0,
+            0});
             // 
             // checkBox_r5_gt130
             // 
@@ -779,41 +863,6 @@
             this.button_ran.UseVisualStyleBackColor = true;
             this.button_ran.Click += new System.EventHandler(this.button_ran_Click);
             // 
-            // numericUpDown_fix_sum
-            // 
-            this.numericUpDown_fix_sum.Location = new System.Drawing.Point(376, 49);
-            this.numericUpDown_fix_sum.Maximum = new decimal(new int[] {
-            183,
-            0,
-            0,
-            0});
-            this.numericUpDown_fix_sum.Minimum = new decimal(new int[] {
-            21,
-            0,
-            0,
-            0});
-            this.numericUpDown_fix_sum.Name = "numericUpDown_fix_sum";
-            this.numericUpDown_fix_sum.Size = new System.Drawing.Size(69, 25);
-            this.numericUpDown_fix_sum.TabIndex = 8;
-            this.numericUpDown_fix_sum.Value = new decimal(new int[] {
-            111,
-            0,
-            0,
-            0});
-            // 
-            // checkBox_r5_fix_sum
-            // 
-            this.checkBox_r5_fix_sum.AutoSize = true;
-            this.checkBox_r5_fix_sum.Checked = true;
-            this.checkBox_r5_fix_sum.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_r5_fix_sum.Location = new System.Drawing.Point(356, 24);
-            this.checkBox_r5_fix_sum.Name = "checkBox_r5_fix_sum";
-            this.checkBox_r5_fix_sum.Size = new System.Drawing.Size(89, 19);
-            this.checkBox_r5_fix_sum.TabIndex = 9;
-            this.checkBox_r5_fix_sum.Text = "固定和值";
-            this.checkBox_r5_fix_sum.UseVisualStyleBackColor = true;
-            this.checkBox_r5_fix_sum.CheckedChanged += new System.EventHandler(this.checkBox_r5_fix_sum_CheckedChanged);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -822,53 +871,6 @@
             this.label7.Size = new System.Drawing.Size(97, 15);
             this.label7.TabIndex = 3;
             this.label7.Text = "选择上一期：";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.textBox_hasno);
-            this.groupBox7.Controls.Add(this.checkBox_r6_hasno);
-            this.groupBox7.Controls.Add(this.textBox_has);
-            this.groupBox7.Controls.Add(this.checkBox_r6_has);
-            this.groupBox7.Location = new System.Drawing.Point(6, 429);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(471, 92);
-            this.groupBox7.TabIndex = 6;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "规则6：锁定与排除(英文逗号,隔开)";
-            // 
-            // checkBox_r6_has
-            // 
-            this.checkBox_r6_has.AutoSize = true;
-            this.checkBox_r6_has.Location = new System.Drawing.Point(17, 25);
-            this.checkBox_r6_has.Name = "checkBox_r6_has";
-            this.checkBox_r6_has.Size = new System.Drawing.Size(74, 19);
-            this.checkBox_r6_has.TabIndex = 0;
-            this.checkBox_r6_has.Text = "必包含";
-            this.checkBox_r6_has.UseVisualStyleBackColor = true;
-            // 
-            // textBox_has
-            // 
-            this.textBox_has.Location = new System.Drawing.Point(98, 19);
-            this.textBox_has.Name = "textBox_has";
-            this.textBox_has.Size = new System.Drawing.Size(367, 25);
-            this.textBox_has.TabIndex = 1;
-            // 
-            // checkBox_r6_hasno
-            // 
-            this.checkBox_r6_hasno.AutoSize = true;
-            this.checkBox_r6_hasno.Location = new System.Drawing.Point(17, 56);
-            this.checkBox_r6_hasno.Name = "checkBox_r6_hasno";
-            this.checkBox_r6_hasno.Size = new System.Drawing.Size(74, 19);
-            this.checkBox_r6_hasno.TabIndex = 2;
-            this.checkBox_r6_hasno.Text = "必排除";
-            this.checkBox_r6_hasno.UseVisualStyleBackColor = true;
-            // 
-            // textBox_hasno
-            // 
-            this.textBox_hasno.Location = new System.Drawing.Point(98, 50);
-            this.textBox_hasno.Name = "textBox_hasno";
-            this.textBox_hasno.Size = new System.Drawing.Size(367, 25);
-            this.textBox_hasno.TabIndex = 3;
             // 
             // Form1
             // 
@@ -889,8 +891,11 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_fix_sum)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -904,9 +909,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_fix_sum)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

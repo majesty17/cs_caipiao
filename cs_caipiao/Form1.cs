@@ -48,18 +48,12 @@ namespace cs_caipiao
             checkBox_r5_fix_sum.Checked = false;
             checkBox_r5_fix_sum.Checked = true;
 
-
             // 定义特定时间
             DateTime specificTime = new DateTime(2025, 3, 23, 12, 0, 0);
-            // 计算时间差
             TimeSpan timeDifference = specificTime - DateTime.Now;
-            // 获取相差的秒数
             double secondsDifference = timeDifference.TotalSeconds;
             if (timeDifference.TotalSeconds <= 0.0)
-            {
                 this.Close();
-            }
-
         }
 
         // 按钮选数
@@ -129,6 +123,25 @@ namespace cs_caipiao
             if (num_last.Count < 6)
             {
                 MessageBox.Show("请选中上期6个号码");
+                return;
+            }
+
+            List<int> num_has = null;
+            List<int> num_hasno = null;
+            // 提前拿到一些值
+            try
+            {
+                string str_has = textBox_has.Text.Trim().Replace(" ", "");
+                num_has = str_has.Split(',').Select(int.Parse).ToList();
+
+                string str_hasno = textBox_hasno.Text.Trim().Replace(" ", "");
+                num_hasno = str_hasno.Split(',').Select(int.Parse).ToList();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"输入解析失败：{ex.Message}");
                 return;
             }
 
@@ -282,8 +295,6 @@ namespace cs_caipiao
                 {
                     try
                     {
-                        string str_has = textBox_has.Text.Trim().Replace(" ", "");
-                        List<int> num_has = str_has.Split(',').Select(int.Parse).ToList();
 
                         int ct_has_no = 0; //记录不包含给定值的次数
                         foreach(int _n in num_has)
@@ -305,9 +316,6 @@ namespace cs_caipiao
                 {
                     try
                     {
-                        string str_hasno = textBox_hasno.Text.Trim().Replace(" ", "");
-                        List<int> num_hasno = str_hasno.Split(',').Select(int.Parse).ToList();
-
                         int ct_has = 0; //记录包含给定值的次数
                         foreach (int _n in num_hasno)
                         {
@@ -417,5 +425,8 @@ namespace cs_caipiao
                 checkBox_r5_gt130.Enabled = true;
             }
         }
+
+ 
+
     }
 }
