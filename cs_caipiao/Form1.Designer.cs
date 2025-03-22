@@ -786,6 +786,9 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
+            this.listView_ret.FullRowSelect = true;
+            this.listView_ret.GridLines = true;
+            this.listView_ret.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_ret.HideSelection = false;
             this.listView_ret.Location = new System.Drawing.Point(518, 44);
             this.listView_ret.Name = "listView_ret";
@@ -801,22 +804,27 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "2";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "3";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "4";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "5";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "6";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader7
             // 

@@ -131,12 +131,16 @@ namespace cs_caipiao
             // 提前拿到一些值
             try
             {
-                string str_has = textBox_has.Text.Trim().Replace(" ", "");
-                num_has = str_has.Split(',').Select(int.Parse).ToList();
-
-                string str_hasno = textBox_hasno.Text.Trim().Replace(" ", "");
-                num_hasno = str_hasno.Split(',').Select(int.Parse).ToList();
-
+                if (checkBox_r6_has.Checked)
+                {
+                    string str_has = textBox_has.Text.Trim().Replace(" ", "");
+                    num_has = str_has.Split(',').Select(int.Parse).ToList();
+                }
+                if (checkBox_r6_hasno.Checked)
+                {
+                    string str_hasno = textBox_hasno.Text.Trim().Replace(" ", "");
+                    num_hasno = str_hasno.Split(',').Select(int.Parse).ToList();
+                }
             }
             catch (Exception ex)
             {
